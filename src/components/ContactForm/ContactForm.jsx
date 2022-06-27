@@ -42,7 +42,7 @@ class ContactForm extends Component {
               required
               onChange={this.handleChange}
             />
-            <button type="button" onClick={this.addContact}>add contact</button>
+            <button type="button"className='addBtn' onClick={this.addContact}>add contact</button>
         </div>
     );
   }

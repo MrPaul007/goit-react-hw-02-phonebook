@@ -17,14 +17,20 @@ function ContactList({ contacts, onDelete }) {
  )   
 }
 
-// ContactList.defaultProps = {
-//     avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-// };
+ContactList.defaultProps = {
+    contacts: [],
+    onDelete: () => {}
+};
   
-// ContactList.propTypes = {
-//   name: PropTypes.string,
-//   avatar: PropTypes.string,
-//   isOnline: PropTypes.bool,
-// };
+ContactList.propTypes = {
+    contacts: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          name: PropTypes.string,
+          number: PropTypes.string
+        }),
+      ).isRequired,
+    onDelete: PropTypes.func
+};
 
 export default ContactList;

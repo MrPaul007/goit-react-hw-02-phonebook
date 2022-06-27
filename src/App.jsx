@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { nanoid } from 'nanoid'
 import initialContacts from "./initialContacts.json";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
@@ -12,7 +13,7 @@ class App extends Component {
 
   addContact = (name, number) => {
     const contact = {
-      id: "13",
+      id: nanoid(),
       name,
       number
     };
@@ -48,7 +49,7 @@ class App extends Component {
 
     return (
       <div>
-        <h2>Phonebook</h2>
+        <h1>Phonebook</h1>
         <ContactForm onClick={this.addContact}/>
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.changeFilter}/>
@@ -59,12 +60,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/* <div>
-<h1>Phonebook</h1>
-<ContactForm ... />
-
-<h2>Contacts</h2>
-<Filter ... />
-<ContactList ... />
-</div> */}
