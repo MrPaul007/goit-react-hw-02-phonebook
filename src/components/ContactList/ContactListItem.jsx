@@ -10,10 +10,10 @@ function ContactListItem({ name, number, id, deleteContact }) {
 }
 
 ContactListItem.propTypes = {
-  name: PropTypes.string,
-  number: PropTypes.string,
-  id: PropTypes.string,
-  deleteContact: PropTypes.func
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  deleteContact: PropTypes.func.isRequired
 };
 
 export default ContactListItem;
